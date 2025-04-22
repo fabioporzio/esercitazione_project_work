@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipendenti</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+</head>
+<body onload="createEmployeesDataTable()">
+    <div class="container">
+        <header class="py-3 mb-4 border-bottom">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                        <img src="img/logo.png" alt="Logo" width="auto" height="42" class="d-inline-block align-text-top">
+                        <span class="fs-4 ms-2">EcoTech Solutions</span>
+                        </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary fs-5">Home</a></li>
+                            <li class="nav-item"><a href="warningLetter.html" class="nav-link px-2 text-body-secondary fs-5">Lettere di Richiamo</a></li>
+                            <li class="nav-item"><a href="employee.html" class="nav-link px-2 text-body-secondary fs-5 fw-bold">Dipendenti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <form action="employee.html" class="container d-flex align-self-center" style="padding: 0;">
+                <select name="employeeCategory" id="employeeCategory" style="margin-right: 0.5rem; padding-top: .25rem; padding-bottom: .25rem; padding-left: .5rem; font-size: .875rem; border-radius: var(--bs-border-radius-sm);">
+                    <option value=""></option>
+                    <option value="tecnico">Tecnici</option>
+                    <option value="manager">Manager</option>
+                    <option value="dirigente">Dirigenti</option>
+                    <option value="leggende">Leggende</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-sm">Filtra</button>
+            </form>
+    
+            <table id="employeesTable" class="table table-striped">
+                <thead>
+                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Data Assunzione</th>
+                    <th>Riferimento</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </main>
+
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary active">Home</a></li>
+                <li class="nav-item"><a href="warningLetter.html" class="nav-link px-2 text-body-secondary">Lettere di Richiamo</a></li>
+                <li class="nav-item"><a href="employee.html" class="nav-link px-2 text-body-secondary fw-bold">Dipendenti</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2025 ITS Incom Academy</p>
+        </footer>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</html>

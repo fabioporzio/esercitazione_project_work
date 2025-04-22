@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Lettera di Richiamo</title>
+</head>
+<body class="min-vh-100 d-flex flex-column">
+    <div class="container d-flex flex-column flex-grow-1">
+        <header class="py-3 mb-4 border-bottom">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                        <img src="img/logo.png" alt="Logo" width="auto" height="42" class="d-inline-block align-text-top">
+                        <span class="fs-4 ms-2">EcoTech Solutions</span>
+                        </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary fs-5">Home</a></li>
+                            <li class="nav-item"><a href="warningLetter.html" class="nav-link px-2 text-body-secondary fs-5 fw-bold">Lettere di Richiamo</a></li>
+                            <li class="nav-item"><a href="employee.html" class="nav-link px-2 text-body-secondary fs-5">Dipendenti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <p class="fs-1 text-center fw-bold">Invia una lettera di richiamo</p>
+            <p class="fs-4 text-center">Inserisci i dati del dipendente e il testo della lettera di richiamo</p>
+          
+            <form action="warningLetter.html" class="row g-3 d-flex flex-column">
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="employeeFirstName" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" name="employeeFirstName" id="employeeFirstName" placeholder="Mario" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="employeeLastName" class="form-label">Cognome:</label>
+                        <input type="text" class="form-control" name="employeeLastName" id="employeeLastName" placeholder="Rossi" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="employeeEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" name="employeeEmail" id="employeeEmail" placeholder="mario.rossi@gmail.com" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="warningLetterText" class="form-label">Testo della lettera di richiamo:</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" rows="6" style="height: 100%; resize: none;" id="warningLetterText" name="warningLetterText" required></textarea>
+                            <label for="warningLetterText">Inserisci il testo della lettera di richiamo</label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary me-2" onclick="sendWarningLetter()">Invia lettera di richiamo</button>
+                        <button type="reset" class="btn btn-secondary ms-2">Svuota i campi</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+
+        <footer class="py-3">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="warningLetter.html" class="nav-link px-2 text-body-secondary fw-bold">Lettere di Richiamo</a></li>
+                <li class="nav-item"><a href="employee.html" class="nav-link px-2 text-body-secondary">Dipendenti</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2025 ITS Incom Academy</p>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
