@@ -1,5 +1,5 @@
 async function createEmployeesDataTable() {
-    const url = "https://its.digitalminds.cloud/Dipendenti.json";
+    const url = "http://its.digitalminds.cloud/Dipendenti.json";
     try {
         const response = await fetch(url);
         if (!response.ok) {
