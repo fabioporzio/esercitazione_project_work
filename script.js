@@ -1,5 +1,5 @@
 async function createEmployeesDataTable() {
-    const url = "http://its.digitalminds.cloud/Dipendenti.json";
+    const url = "https://sample-apis-sigma.vercel.app/api/dipendenti";
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -114,10 +114,10 @@ function sendWarningLetter() {
     const employeeLastName = document.getElementById("employeeLastName").value
     const employeeEmail = document.getElementById("employeeEmail").value
     const warningLetterText = document.getElementById("warningLetterText").value
-    if ((employeeFirstName != null || employeeFirstName != "") && (employeeLastName != null || employeeLastName != "") && (employeeEmail != null || employeeEmail != "") && (warningLetterText != null || warningLetterText != "")) {
-        alert("Lettera di richiamo inviata!")
+    if (employeeFirstName.trim() && employeeLastName.trim() && employeeEmail.trim() && warningLetterText.trim()) {
+        alert("Lettera di richiamo inviata!");
     }
     else {
-        return
+        return;
     }
 }
